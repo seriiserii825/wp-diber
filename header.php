@@ -36,14 +36,6 @@
            	'walker'          => '',
            ] ); ?>
 
-            <!--<ul class="main-menu" id="js-main-menu">-->
-            <!--    <li><a href="index.html">Home</a></li>-->
-            <!--    <li><a href="nostre-bire.html">Le nostre birre</a></li>-->
-            <!--    <li><a href="alte-bevande.html">Altre bevande</a></li>-->
-            <!--    <li><a href="services.html">Servizi</a></li>-->
-            <!--    <li><a href="about.html">Chi siamo</a></li>-->
-            <!--    <li><a href="contacts.html">Contatti</a></li>-->
-            <!--</ul>-->
             <a class="logo" href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/i/logo.svg" alt=""></a>
             <ul class="header-socials">
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
