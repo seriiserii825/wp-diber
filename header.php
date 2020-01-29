@@ -36,10 +36,13 @@
            	'walker'          => '',
            ] ); ?>
 
-            <a class="logo" href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/i/logo.svg" alt=""></a>
+            <a class="logo" href="<?php echo home_url(); ?>">
+                <?php echo kama_thumb_img('w=170 &h=90', carbon_get_theme_option('crb_logo')); ?>
+            </a>
+
             <ul class="header-socials">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="<?php echo carbon_get_theme_option('crb_facebook'); ?>"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="<?php echo carbon_get_theme_option('crb_instagram'); ?>"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
     </div>
