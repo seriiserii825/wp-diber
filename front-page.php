@@ -5,45 +5,34 @@
 get_header();
 ?>
 <div class="main-slider" id="js-main-slider">
-    <div class="main-slider__item"
-         style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/slider.jpg')">
-        <div class="main-slider__content-wrap">
-            <div class="main-slider__content">
-                <h3 class="main-slider__title">DI.BE.R Bevande.</h3>
-                <p class="main-slider__text">Le migliori birre e bevande per ristoranti, pub ed eventi.</p><a
-                        class="link" href="#">
-                    <span> Scoprile nostre birre</span>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </a>
+    <?php
+        $slider = new WP_Query([
+            'post_type' => 'slider',
+            'posts_per_page' => -1
+        ]);
+    ?>
+    <?php if($slider->have_posts()): ?>
+    	<?php while($slider->have_posts()): ?>
+    		<?php $slider->the_post(); ?>
+            <div class="main-slider__item" style="background-image: url('<?php echo kama_thumb_src('w=1920 &h=1080'); ?>')">
+                <div class="main-slider__content-wrap">
+                    <div class="main-slider__content">
+                        <h3 class="main-slider__title"><?php echo the_title(); ?></h3>
+
+                        <div class="main-slider__text">
+                            <?php the_content(); ?>
+                        </div>
+
+                        <a class="link" href="<?php echo get_page_link(carbon_get_the_post_meta('crb_slider_link_id')); ?>">
+                            <span><?php echo carbon_get_the_post_meta('crb_slider_link'); ?></span>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="main-slider__item"
-         style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/slider.jpg')">
-        <div class="main-slider__content-wrap">
-            <div class="main-slider__content">
-                <h3 class="main-slider__title">DI.BE.R Bevande.</h3>
-                <p class="main-slider__text">Le migliori birre e bevande per ristoranti, pub ed eventi.</p><a
-                        class="link" href="#">
-                    <span> Scoprile nostre birre</span>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="main-slider__item"
-         style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/slider.jpg')">
-        <div class="main-slider__content-wrap">
-            <div class="main-slider__content">
-                <h3 class="main-slider__title">DI.BE.R Bevande.</h3>
-                <p class="main-slider__text">Le migliori birre e bevande per ristoranti, pub ed eventi.</p><a
-                        class="link" href="#">
-                    <span> Scoprile nostre birre</span>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+    	<?php endwhile; ?>
+    	<?php wp_reset_postdata(); ?>
+    <?php endif; ?>
 </div>
 <div class="container">
     <section class="intro">

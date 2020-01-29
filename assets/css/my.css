@@ -322,6 +322,9 @@ p {
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
+.link:visited {
+	color: #008BCF;
+}
 
 .link:hover {
 	color: white;
@@ -755,7 +758,7 @@ p {
 
 .main-footer__contacts {
 	display: grid;
-	grid-template-columns: 320px 1fr;
+	grid-template-columns: 316px 1fr;
 	grid-gap: 20px;
 }
 
