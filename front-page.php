@@ -59,7 +59,8 @@ get_header();
         <div class="categories-block__item"
              style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/categories-block/1.jpg')">
             <div class="categories-block__footer">
-                <h4 class="title">Bibite</h4><a class="link" href="#">
+                <h4 class="title">Bibite</h4>
+                <a class="link" href="#">
                     <span> Vai al catalogo</span>
                     <i class="fas fa-chevron-circle-right"></i>
                 </a>
