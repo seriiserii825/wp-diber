@@ -39,10 +39,10 @@ get_header();
     	<?php while(have_posts()): ?>
     		<?php the_post(); ?>
             <section class="intro">
-                <div class="intro__text" style="background-image: url('<?php echo carbon_get_the_post_meta('crb_le_nostre_bire_img'); ?>')">
+                <div class="intro__text" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/intro-bg.jpg');')">
                     <h2 class="title"><?php echo carbon_get_the_post_meta('crb_le_nostre_bire_title'); ?></h2>
                     <p><?php echo carbon_get_the_post_meta('crb_le_nostre_bire_text'); ?></p>
-                    <a class="link" href="<?php echo carbon_get_the_post_meta('crb_le_nostre_bire_link_id'); ?>">
+                    <a class="link" href="<?php echo get_page_link(carbon_get_the_post_meta('crb_le_nostre_bire_link_id')); ?>">
                         <span><?php echo carbon_get_the_post_meta('crb_le_nostre_bire_link'); ?></span>
                         <i class="fas fa-chevron-circle-right"></i>
                     </a>
