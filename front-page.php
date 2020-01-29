@@ -35,20 +35,26 @@ get_header();
     <?php endif; ?>
 </div>
 <div class="container">
-    <section class="intro">
-        <div class="intro__text"
-             style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/intro-bg.jpg')">
-            <h2 class="title">Le migliori birre artigianali per la tua attività.</h2>
-            <p>Da oltre 40 anni selezioniamo direttamente le migliori birre artigianali italiane ed estere (Germania, Austria, Inghilterra e Belgio). I nostri beer sommelier non solo individuano i migliori birrifici italiani e stranieri, ma sono anche in grado di consigliarti e guidarti nella scelta delle migliori birre per il tuo pubblico. Siamo inoltre in grado di garantire l’esclusività territoriale delle birre speciali più pregiate.</p>
-            <a class="link" href="#">
-                <span> Vedi tutte le nostre birre</span>
-                <i class="fas fa-chevron-circle-right"></i>
-            </a>
-        </div>
-        <div class="intro__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/i/intro.jpg" alt="">
-        </div>
-    </section>
+    <?php if(have_posts()): ?>
+    	<?php while(have_posts()): ?>
+    		<?php the_post(); ?>
+            <section class="intro">
+                <div class="intro__text" style="background-image: url('<?php echo carbon_get_the_post_meta('crb_le_nostre_bire_img'); ?>')">
+                    <h2 class="title"><?php echo carbon_get_the_post_meta('crb_le_nostre_bire_title'); ?></h2>
+                    <p><?php echo carbon_get_the_post_meta('crb_le_nostre_bire_text'); ?></p>
+                    <a class="link" href="<?php echo carbon_get_the_post_meta('crb_le_nostre_bire_link_id'); ?>">
+                        <span><?php echo carbon_get_the_post_meta('crb_le_nostre_bire_link'); ?></span>
+                        <i class="fas fa-chevron-circle-right"></i>
+                    </a>
+                </div>
+                <div class="intro__img">
+                    <?php echo kama_thumb_img('w=910 &h=585', carbon_get_the_post_meta('crb_le_nostre_bire_img')); ?>
+                </div>
+            </section>
+    	<?php endwhile; ?>
+    	<?php wp_reset_postdata(); ?>
+    <?php endif; ?>
+
     <div class="categories-block">
         <div class="categories-block__item"
              style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/categories-block/1.jpg')">
