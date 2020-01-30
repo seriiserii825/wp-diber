@@ -45,3 +45,26 @@ function crb_attach_page_services_options() {
 		         Field::make( 'text', 'crb_services_title', __( 'Intestazione del pagina' ) )
 	         ) );
 }
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_page_about_options' );
+function crb_attach_page_about_options() {
+	Container::make( 'post_meta', __( 'Fields' ) )
+	         ->where( 'post_id', '=', 13 )
+	         ->add_tab( __( 'Immagine' ), array(
+		         Field::make( 'image', 'crb_services_img', __( 'Immagine' ) )
+		              ->set_value_type( 'url' )
+		              ->set_help_text( '1920x724' ),
+	         ) )
+	         ->add_tab( __( 'Picolo primo blocco' ), array(
+		         Field::make( 'rich_text', 'crb_about_block_small_1', __( 'Testo per il piccolo primo blocco' ) ),
+	         ) )
+	         ->add_tab( __( 'Picolo secondo blocco' ), array(
+		         Field::make( 'rich_text', 'crb_about_block_small_2', __( 'Testo per un piccolo secondo blocco' ) ),
+	         ) )
+	         ->add_tab( __( 'Grande blocco' ), array(
+		         Field::make( 'image', 'crb_grande_blocco_image', __( 'Immagine' ) )
+		              ->set_value_type( 'url' ),
+
+		         Field::make( 'rich_text', 'crb_about_block_big', __( 'Testo per un grande blocco' ) ),
+	         ) );
+}
