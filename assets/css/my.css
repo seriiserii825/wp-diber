@@ -1144,11 +1144,11 @@ p {
 	cursor: pointer;
 }
 
-.alte-bevande__list li.active .alte-bevande__img {
+.alte-bevande__list li.mixitup-control-active .alte-bevande__img {
 	box-shadow: 0px 0px 0px 2px #008BCF inset;
 }
 
-.alte-bevande__list li.active .alte-bevande__img::after {
+.alte-bevande__list li.mixitup-control-active .alte-bevande__img::after {
 	background: #008BCF;
 }
 

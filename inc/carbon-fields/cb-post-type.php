@@ -39,3 +39,12 @@ function crb_attach_beer_options() {
 		              ->set_layout( 'tabbed-horizontal' )
 	         ) );
 }
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_bevanda_options' );
+function crb_attach_bevanda_options() {
+	Container::make( 'post_meta', __( 'Fields' ) )
+	         ->where( 'post_type', '=', 'bevanda' )
+	         ->add_fields( array(
+		         Field::make( 'text', 'crb_bevanda_link', __( 'Riferimento al produttore' ) )
+	         ) );
+}

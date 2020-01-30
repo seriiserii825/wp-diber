@@ -37,8 +37,11 @@ jQuery(document).ready(function($) {
 	};
 	activeMenuItem();
 
-	// let mixitupActiveMenuItem = function () {
-	// 	$();
-	// };
-	// mixitupActiveMenuItem();
+	let mixitupActiveMenuItem = function () {
+		$('#js-alte-bevande__list li').on('click', function () {
+			$('#js-alte-bevande__list li').removeClass('active');
+			$(this).addClass('active');
+		});
+	};
+	mixitupActiveMenuItem();
 });
