@@ -18,3 +18,24 @@ function crb_attach_slider_options() {
 			 ->set_width(50),
 		) );
 }
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_beer_options' );
+function crb_attach_beer_options() {
+	Container::make( 'post_meta', __( 'Fields' ) )
+	         ->where( 'post_type', '=', 'beer' )
+	         ->add_fields( array(
+		         Field::make( 'text', 'crb_beer_title', __( 'Titolo da visualizzare nella pagina di un singolo record' ) )
+		              ->set_width(50),
+		         Field::make( 'text', 'crb_beer_link', __( "Riferimento al produttore di birra" ) )
+		              ->set_width(50),
+
+		         Field::make( 'complex', 'crb_beer_links', __( 'Collegamento alle filiali' ) )
+		              ->add_fields( array(
+			              Field::make( 'text', 'text', __( 'Nome del collegamento' ) )
+			                   ->set_width(50),
+			              Field::make( 'text', 'link', __( "Url link" ) )
+			                   ->set_width(50),
+		              ) )
+		              ->set_layout( 'tabbed-horizontal' )
+	         ) );
+}
