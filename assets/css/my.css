@@ -1001,6 +1001,9 @@ p {
 .copyright__item:first-child {
 	margin-bottom: 20px;
 }
+.copyright_description {
+	width: 110px;
+}
 
 .copyright__item img {
 	margin-left: 20px;

@@ -43,8 +43,16 @@ function crb_attach_theme_options() {
 			                                              ->set_help_text( '190x110' )
 		                                         ) )
 		                                         ->set_layout( 'tabbed-horizontal' )
+	                                    ) )
+	                                    ->add_tab( __( 'Copyright' ), array(
+		                                    Field::make( 'rich_text', 'crb_copyright', __( 'Copyright' ) ),
+		                                    Field::make( 'text', 'crb_copyright_description', __( 'Testo per il copyright' ) ),
+		                                    Field::make( 'image', 'crb_altuofianco_img', __( 'Immagine' ) )
+		                                         ->set_value_type( 'url' )
+		                                         ->set_width( 50 ),
+		                                    Field::make( 'text', 'crb_altuofianco_link', __( 'Altuofianco link' ) )
+		                                         ->set_width( 50 ),
 	                                    ) );
-
 //	 Add second options page under 'Basic Options'
 	Container::make( 'theme_options', 'Blocks' )
 	         ->set_page_parent( $basic_options_container )// reference to a top level container
