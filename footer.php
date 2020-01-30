@@ -3,42 +3,49 @@
             <div class="main-footer__info">
                 <div class="main-footer__info-wrap">
                     <div class="main-footer__info-item">
-                        <h3 class="title title--color">Contatti</h3>
+                        <h3 class="title title--color"><?php echo carbon_get_theme_option('crb_contacts_title'); ?></h3>
                         <div class="main-footer__contacts">
-                            <div class="main-footer__contacts__item">Via Trentino 22, 31029 - Vittorio Veneto (TV) (Zona Industriale S. Giacomo di Veglia)</div>
+                            <div class="main-footer__contacts__item"><?php echo carbon_get_theme_option('crb_address'); ?></div>
                             <div class="main-footer__contacts__item">
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-instagram"></i>
+                                <a href="<?php echo carbon_get_theme_option('crb_facebook'); ?>"><i class="fab fa-facebook-f"></i></a>
+                                <a href="<?php echo carbon_get_the_post_meta('crb_instagram'); ?>"><i class="fab fa-instagram"></i></a>
                             </div>
                             <div class="main-footer__contacts__item"> Email. <a
-                                        href="mailto:diber@diberbevande.it">diber@diberbevande.it</a></div>
+                                        href="mailto:<?php echo carbon_get_theme_option('crb_email'); ?>"><?php echo carbon_get_theme_option('crb_email'); ?></a></div>
+                            <?php
+                                $phone = carbon_get_theme_option('crb_phone');
+                                $phone_clear = clear_phone($phone);
+                            ?>
                             <div class="main-footer__contacts__item">Tel. <a
-                                        href="tel:+390438941681">+39 (0) 438 941681</a></div>
+                                        href="tel:<?php echo $phone_clear; ?>"><?php echo $phone; ?></a></div>
                             <div class="main-footer__contacts__item">
                                 <span>Orario di apertura dal lunedì al venerdì:</span>
-                                <span> 08.00 - 12.00 e 13.00 - 17.30</span>
+                                <span><?php echo carbon_get_theme_option('crb_orar_monday'); ?></span>
                             </div>
                             <div class="main-footer__contacts__item">
                                 <span>Sabato:</span>
-                                <span>08.30 - 12.00</span>
+                                <span><?php echo carbon_get_theme_option('crb_orar_sunday'); ?></span>
                             </div>
                         </div>
                     </div>
                     <div class="main-footer__info-item">
-                        <h3 class="title title--color"> Alcune delle nostre birre speciali</h3>
-                        <div class="main-footer__partners"><a class="main-footer__partners-item" href="#">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/i/partners/1.png" alt="">
-                            </a><a class="main-footer__partners-item" href="#">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/i/partners/2.png" alt="">
-                            </a><a class="main-footer__partners-item" href="#">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/i/partners/3.png" alt="">
-                            </a></div>
+                        <h3 class="title title--color"><?php echo carbon_get_theme_option('crb_special_beer_title'); ?></h3>
+                        <div class="main-footer__partners">
+                            <?php $special_beers =  carbon_get_theme_option('crb_special_beer_images'); ?>
+                            <?php foreach($special_beers as $beer): ?>
+                                <a class="main-footer__partners-item" href="#">
+                                    <img src="<?php echo $beer['image']; ?>" alt="">
+                                </a>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
                 </div>
+
                 <div class="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2773.612390166544!2d12.31806391580244!3d45.9590269083091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477913a9bd0bee31%3A0xf64f6a80d8fbe1fc!2zVmlhIFRyZW50aW5vLCAyMiwgMzEwMjkgVml0dG9yaW8gVmVuZXRvIFRWLCDQmNGC0LDQu9C40Y8!5e0!3m2!1sru!2s!4v1580207053086!5m2!1sru!2s"
                             width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
+
             </div>
             <div class="main-footer__form">
                 <h2 class="title title--color">Scrivici</h2>
