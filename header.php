@@ -41,8 +41,8 @@
             </a>
 
             <ul class="header-socials">
-                <li><a href="<?php echo carbon_get_theme_option('crb_facebook'); ?>"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="<?php echo carbon_get_theme_option('crb_instagram'); ?>"><i class="fab fa-instagram"></i></a></li>
+                <li><a target="_blank" href="<?php echo carbon_get_theme_option('crb_facebook'); ?>"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a target="_blank" href="<?php echo carbon_get_theme_option('crb_instagram'); ?>"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
     </div>

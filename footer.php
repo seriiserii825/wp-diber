@@ -7,10 +7,10 @@
                     <div class="main-footer__contacts">
                         <div class="main-footer__contacts__item"><?php echo carbon_get_theme_option( 'crb_address' ); ?></div>
                         <div class="main-footer__contacts__item">
-                            <a href="<?php echo carbon_get_theme_option( 'crb_facebook' ); ?>">
+                            <a target="_blank" href="<?php echo carbon_get_theme_option( 'crb_facebook' ); ?>">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="<?php echo carbon_get_the_post_meta( 'crb_instagram' ); ?>">
+                            <a target="_blank" href="<?php echo carbon_get_theme_option( 'crb_instagram' ); ?>">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
