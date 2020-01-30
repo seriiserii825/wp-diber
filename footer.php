@@ -1,4 +1,3 @@
-<div class="container">
     <footer class="main-footer">
         <div class="main-footer__content">
             <div class="main-footer__info">
