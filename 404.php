@@ -17,5 +17,6 @@ get_header();
         </div>
     </div>
 
+    <div class="container">
 <?php
 get_footer();

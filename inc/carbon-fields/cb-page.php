@@ -33,3 +33,15 @@ function crb_attach_page_finance_options() {
 		         Field::make( 'text', 'crb_nostri_servizi_link', __( 'Intestazione del blocco' ) )
 	         ) );
 }
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_page_services_options' );
+function crb_attach_page_services_options() {
+	Container::make( 'post_meta', __( 'Fields' ) )
+	         ->where( 'post_id', '=', 11 )
+	         ->add_tab( __( 'Fields' ), array(
+		         Field::make( 'image', 'crb_services_img', __( 'Immagine' ) )
+		              ->set_value_type( 'url' )
+		              ->set_help_text( '1920x724' ),
+		         Field::make( 'text', 'crb_services_title', __( 'Intestazione del pagina' ) )
+	         ) );
+}
