@@ -22,7 +22,7 @@
 						$phone_clear = clear_phone( $phone );
 						?>
                         <div class="main-footer__contacts__item">Tel. <a
-                                    href="tel:<?php echo $phone_clear; ?>"><?php echo $phone; ?></a></div>
+                                    href="tel:+<?php echo $phone_clear; ?>"><?php echo $phone; ?></a></div>
                         <div class="main-footer__contacts__item">
                             <span>Orario di apertura dal lunedì al venerdì:</span>
                             <span><?php echo carbon_get_theme_option( 'crb_orar_monday' ); ?></span>
@@ -47,37 +47,14 @@
             </div>
 
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2773.612390166544!2d12.31806391580244!3d45.9590269083091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477913a9bd0bee31%3A0xf64f6a80d8fbe1fc!2zVmlhIFRyZW50aW5vLCAyMiwgMzEwMjkgVml0dG9yaW8gVmVuZXRvIFRWLCDQmNGC0LDQu9C40Y8!5e0!3m2!1sru!2s!4v1580207053086!5m2!1sru!2s"
-                        width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.it/maps/embed?pb=!1m18!1m12!1m3!1d2773.612390166544!2d12.31806391580244!3d45.9590269083091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477913a9bd0bee31%3A0xf64f6a80d8fbe1fc!2zVmlhIFRyZW50aW5vLCAyMiwgMzEwMjkgVml0dG9yaW8gVmVuZXRvIFRWLCDQmNGC0LDQu9C40Y8!5e0!3m2!1sru!2s!4v1580402534690!5m2!1sru!2s" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
 
         </div>
         <div class="main-footer__form">
             <h2 class="title title--color">Scrivici</h2>
             <div class="form">
-                <form>
-                    <div class="form-group">
-                        <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="oggetto">Oggetto</label>
-                        <input type="text" name="oggetto" id="oggetto">
-                    </div>
-                    <div class="form-group">
-                        <label for="messaggio">Messaggio</label>
-                        <textarea name="messaggio" id="messaggio"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Invia">
-                        <input class="checkbox" type="checkbox" name="check" id="check">
-                        <label for="check">Cliccando su invia dichiari di aver preso visione e di accettare la nostra privacy policy</label>
-                    </div>
-                </form>
+				<?php echo do_shortcode( '[contact-form-7 id="160" title="Modulo di contatto"]' ); ?>
             </div>
         </div>
     </div>
@@ -108,3 +85,4 @@
 <?php wp_footer(); ?>
 </body>
 </html>
+
