@@ -56,43 +56,26 @@ get_header();
     <?php endif; ?>
 
     <div class="categories-block">
-        <div class="categories-block__item"
-             style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/categories-block/1.jpg')">
-            <div class="categories-block__footer">
-                <h4 class="title">Bibite</h4>
-                <a class="link" href="#">
-                    <span> Vai al catalogo</span>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </a>
+        <?php
+        $terms = get_terms( [
+	        'taxonomy' => 'type',
+	        'hide_empty' => false,
+        ] );
+        ?>
+        <?php foreach($terms as $term): ?>
+        <?php
+            $term_img = carbon_get_term_meta($term->term_id, 'crb_bevanda_img');
+            ?>
+            <div class="categories-block__item" style="background-image: url('<?php echo kama_thumb_src('w=430 $h=500', $term_img) ?>')">
+                <div class="categories-block__footer">
+                    <h4 class="title"><?php echo $term->name; ?></h4>
+                    <a class="link" href="<?php echo get_page_link(9); ?>">
+                        <span> Vai al catalogo</span>
+                        <i class="fas fa-chevron-circle-right"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="categories-block__item"
-             style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/categories-block/2.jpg')">
-            <div class="categories-block__footer">
-                <h4 class="title">Acque</h4><a class="link" href="#">
-                    <span> Vai al catalogo</span>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </a>
-            </div>
-        </div>
-        <div class="categories-block__item"
-             style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/categories-block/3.jpg')">
-            <div class="categories-block__footer">
-                <h4 class="title">Vini</h4><a class="link" href="#">
-                    <span> Vai al catalogo</span>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </a>
-            </div>
-        </div>
-        <div class="categories-block__item"
-             style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/categories-block/4.jpg')">
-            <div class="categories-block__footer">
-                <h4 class="title">Grappe, distillati e liquori</h4><a class="link" href="#">
-                    <span> Vai al catalogo</span>
-                    <i class="fas fa-chevron-circle-right"></i>
-                </a>
-            </div>
-        </div>
+        <?php endforeach; ?>
     </div>
     <h3 class="title title--color services-block__title">I nostri servizi</h3>
     <section class="services-block">

@@ -16,6 +16,7 @@ require_once __DIR__.'/inc/bs-widgets.php';
 require_once __DIR__.'/inc/bs-styles.php';
 require_once __DIR__.'/inc/bs-post-type.php';
 require_once __DIR__.'/inc/bs-taxonomy.php';
+require_once __DIR__.'/inc/func.php';
 
 
 function bs_diber_content_width() {
