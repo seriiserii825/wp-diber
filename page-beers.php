@@ -15,11 +15,11 @@
 			<?php while ( $beers->have_posts() ): ?>
 				<?php $beers->the_post(); ?>
                 <div class="product__item">
-                    <div class="product__img">
+                    <a href="<?php the_permalink(); ?>" class="product__img">
 						<?php if ( has_post_thumbnail() ): ?>
 							<?php the_post_thumbnail( 'full' ); ?>
 						<?php endif; ?>
-                    </div>
+                    </a>
                     <h3 class="title"><?php the_title(); ?></h3>
                     <a class="link" href="<?php the_permalink(); ?>">
                         <span> Scopri tutte le birre</span>

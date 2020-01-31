@@ -934,6 +934,15 @@ p {
 	display: flex;
 	align-items: center;
 }
+@media screen and (max-width: 380px) {
+	.main-footer .form-group-accept {
+		display: block;
+	}
+	.main-footer .form-group-accept .wpcf7-list-item {
+		margin: 0;
+	}
+}
+
 
 .main-footer .form-group-accept label {
 	display: block;
@@ -1225,6 +1234,7 @@ p {
 }
 
 .alte-bevande__content .alte-bevande__img {
+	display: block;
 	border: 2px solid #008BCF;
 }
 
