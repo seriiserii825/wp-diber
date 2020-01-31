@@ -5,12 +5,10 @@
 get_header();
 ?>
 <div class="privacy-page">
-	<div class="container">
-		<?php if ( have_posts() ): ?>
-			<?php the_post(); ?>
-			<?php the_content(); ?>
-		<?php endif; ?>
-    </div>
+	<?php if ( have_posts() ): ?>
+		<?php the_post(); ?>
+		<?php the_content(); ?>
+	<?php endif; ?>
 </div>
 <div class="container">
-<?php get_footer(); ?>
+	<?php get_footer(); ?>
