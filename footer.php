@@ -38,7 +38,7 @@
                     <div class="main-footer__partners">
 						<?php $special_beers = carbon_get_theme_option( 'crb_special_beer_images' ); ?>
 						<?php foreach ( $special_beers as $beer ): ?>
-                            <a class="main-footer__partners-item" href="#">
+                            <a class="main-footer__partners-item" href="<?php echo get_page_link( 7 ); ?>">
                                 <span class="main-footer__partners-item-front">
                                     <img src="<?php echo $beer['image']; ?>" alt="">
                                 </span>
@@ -58,9 +58,11 @@
 
         </div>
         <div class="main-footer__form">
-            <h2 class="title title--color">Scrivici</h2>
-            <div class="form">
-				<?php echo do_shortcode( '[contact-form-7 id="160" title="Modulo di contatto"]' ); ?>
+            <div class="main-footer__form-wrap">
+                <h2 class="title title--color">Scrivici</h2>
+                <div class="form">
+					<?php echo do_shortcode( '[contact-form-7 id="160" title="Modulo di contatto"]' ); ?>
+                </div>
             </div>
         </div>
     </div>

@@ -17,7 +17,7 @@ get_header();
             <div class="main-slider__item" style="background-image: url('<?php echo kama_thumb_src('w=1920 &h=1080'); ?>')">
                 <div class="main-slider__content-wrap">
                     <div class="main-slider__content">
-                        <h3 class="main-slider__title"><?php echo the_title(); ?></h3>
+                        <h1 class="main-slider__title"><?php echo the_title(); ?></h1>
 
                         <div class="main-slider__text">
                             <?php the_content(); ?>
@@ -69,7 +69,7 @@ get_header();
             ?>
             <div class="categories-block__item" style="background-image: url('<?php echo kama_thumb_src('w=430 $h=500', $term_img) ?>')">
                 <div class="categories-block__footer">
-                    <h4 class="title"><?php echo $term->name; ?></h4>
+                    <h2 class="title"><?php echo $term->name; ?></h2>
                     <a class="link" href="<?php echo get_page_link(9); ?>">
                         <span><?php echo carbon_get_post_meta(5, 'crb_alte_bevande_link'); ?></span>
                         <i class="fas fa-chevron-circle-right"></i>

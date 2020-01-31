@@ -11,7 +11,7 @@
                 <div class="services-block__item"
                      style="background-image: url('<?php echo kama_thumb_src( 'w=892' ); ?>')">
                     <footer class="services-block__footer">
-                        <h2 class="title"><?php the_title(); ?></h2>
+                        <h3 class="title"><?php the_title(); ?></h3>
                         <div class="services-block__text">
 							<?php the_content(); ?>
                         </div>
