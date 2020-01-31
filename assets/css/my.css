@@ -318,30 +318,38 @@ p {
 }
 
 .link {
+	position: relative;
 	color: #008BCF;
 	transition: all .3s;
-	-webkit-transform: scale(1);
-	transform: scale(1);
+	overflow: hidden;
 }
-.link i {
-	transform: translateX(-40px);
+.link::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #008BCF;
 	opacity: 0;
+	transition: .1s;
+	z-index: -1;
 }
+.link:active,
 .link:visited {
 	color: #008BCF;
 }
 
 .link:hover {
-	color: #008BCF;
-	/*color: white;*/
+	color: white;
+}
+.link:hover:before {
+	top: 0;
+	opacity: 1;
 }
 
 .link:hover i {
-	color: #008BCF;
-	/*color: white;*/
-	transition: all .2s ease;
-	transform: translateX(0);
-	opacity: 1;
+	color: white;
 }
 
 .link.link--reverse {
@@ -1575,18 +1583,25 @@ p {
 	margin-top: 40px;
 }
 .arrow-up {
-	display: none;
-	cursor: pointer;
-}
-.arrow-up i {
 	position: fixed;
 	bottom: 4px;
 	right: 50px;
-	font-size: 60px;
-	color: #008BCF;
+	display: none;
+	cursor: pointer;
 	transition: all .5s;
 	opacity: .6;
+	z-index: 1000;
 }
-.arrow-up:hover i {
+.arrow-up i {
+	font-size: 60px;
+	color: #008BCF;
+}
+.arrow-up:hover {
 	opacity: 1;
 }
+@media screen and (max-width: 768px) {
+	.arrow-up {
+		right: 10px;
+	}
+}
+
