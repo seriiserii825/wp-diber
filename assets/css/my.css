@@ -1499,3 +1499,19 @@ p {
 	margin-bottom: 20px;
 	margin-top: 40px;
 }
+.arrow-up {
+	display: none;
+	cursor: pointer;
+}
+.arrow-up i {
+	position: fixed;
+	bottom: 4px;
+	right: 50px;
+	font-size: 60px;
+	color: #008BCF;
+	transition: all .5s;
+	opacity: .6;
+}
+.arrow-up:hover i {
+	opacity: 1;
+}

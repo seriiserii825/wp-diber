@@ -47,7 +47,8 @@
             </div>
 
             <div class="map">
-                <iframe src="https://www.google.it/maps/embed?pb=!1m18!1m12!1m3!1d2773.612390166544!2d12.31806391580244!3d45.9590269083091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477913a9bd0bee31%3A0xf64f6a80d8fbe1fc!2zVmlhIFRyZW50aW5vLCAyMiwgMzEwMjkgVml0dG9yaW8gVmVuZXRvIFRWLCDQmNGC0LDQu9C40Y8!5e0!3m2!1sru!2s!4v1580402534690!5m2!1sru!2s" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.it/maps/embed?pb=!1m18!1m12!1m3!1d2773.612390166544!2d12.31806391580244!3d45.9590269083091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477913a9bd0bee31%3A0xf64f6a80d8fbe1fc!2zVmlhIFRyZW50aW5vLCAyMiwgMzEwMjkgVml0dG9yaW8gVmVuZXRvIFRWLCDQmNGC0LDQu9C40Y8!5e0!3m2!1sru!2s!4v1580402534690!5m2!1sru!2s"
+                        width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
 
         </div>
@@ -72,7 +73,9 @@
             </a>
         </div>
     </div>
-
+    <a href="#" id="js-arrow-up" class="arrow-up">
+        <i class="fas fa-arrow-circle-up"></i>
+    </a>
 </footer>
 </div>
 </div><!--[if lt IE 9]>

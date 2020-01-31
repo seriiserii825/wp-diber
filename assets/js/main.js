@@ -44,4 +44,26 @@ jQuery(document).ready(function($) {
 		});
 	};
 	mixitupActiveMenuItem();
+
+	let scrollUp = function () {
+		let documentHeight = $(document).height();
+		let pointHeight = documentHeight * .25;
+		let arrowUp = $('#js-arrow-up');
+
+		$(window).scroll(function () {
+			if($(this).scrollTop() > pointHeight ) {
+				arrowUp.fadeIn();
+			}else{
+				arrowUp.fadeOut();
+			}
+		});
+
+		arrowUp.on('click', function (e) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1000);
+		});
+	};
+	scrollUp();
 });
