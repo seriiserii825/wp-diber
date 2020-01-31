@@ -876,10 +876,10 @@ p {
 
 .main-footer__form .form-group label {
 	display: block;
-	/*margin-bottom: 30px;*/
 	font-size: 12px;
 	letter-spacing: .1px;
 	text-transform: uppercase;
+	transition: all .3s;
 }
 
 .main-footer__form .form-group input[type="text"],
@@ -893,6 +893,7 @@ p {
 	background: transparent;
 	border: none;
 	border-bottom: 1px dashed #fff;
+	transition: all .3s;
 }
 .main-footer__form .form-group textarea {
 	height: 50px;
@@ -902,6 +903,7 @@ p {
 .main-footer__form .form-group textarea:focus,
 .main-footer__form .form-group input[type="email"]:focus {
 	outline: none;
+	/*border-bottom-color: #008BCF;*/
 }
 
 .main-footer__form .form-group input[type="submit"] {

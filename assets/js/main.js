@@ -66,4 +66,15 @@ jQuery(document).ready(function($) {
 		});
 	};
 	scrollUp();
+
+	let changeInputBorderColor = function () {
+		$('.main-footer__form .form-group input[type="text"], .main-footer__form .form-group textarea, .main-footer__form .form-group input[type="email"]').on('focus', function () {
+			$('.main-footer__form .form-group input[type="text"], .main-footer__form .form-group textarea, .main-footer__form .form-group input[type="email"]').css('borderBottomColor', '#fff');
+			$(this).css('borderBottomColor', '#008BCF');
+			$('.main-footer__form .form-group label').css('color', '#fff');
+			$(this).closest('.form-group').find('label').css('color', '#008BCF');
+		});
+	};
+	changeInputBorderColor();
+
 });
