@@ -323,16 +323,25 @@ p {
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
+.link i {
+	transform: translateX(-40px);
+	opacity: 0;
+}
 .link:visited {
 	color: #008BCF;
 }
 
 .link:hover {
-	color: white;
+	color: #008BCF;
+	/*color: white;*/
 }
 
 .link:hover i {
-	color: white;
+	color: #008BCF;
+	/*color: white;*/
+	transition: all .2s ease;
+	transform: translateX(0);
+	opacity: 1;
 }
 
 .link.link--reverse {
