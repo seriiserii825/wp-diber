@@ -39,7 +39,12 @@
 						<?php $special_beers = carbon_get_theme_option( 'crb_special_beer_images' ); ?>
 						<?php foreach ( $special_beers as $beer ): ?>
                             <a class="main-footer__partners-item" href="#">
-                                <img src="<?php echo $beer['image']; ?>" alt="">
+                                <span class="main-footer__partners-item-front">
+                                    <img src="<?php echo $beer['image']; ?>" alt="">
+                                </span>
+                                <span class="main-footer__partners-item-back">
+                                    <img src="<?php echo $beer['image']; ?>" alt="">
+                                </span>
                             </a>
 						<?php endforeach; ?>
                     </div>
