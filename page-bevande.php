@@ -37,13 +37,16 @@ get_header();
                     <div class="alte-bevande__item mix <?php echo $term; ?>">
                         <a href="<?php echo carbon_get_the_post_meta('crb_bevanda_link'); ?>" class="alte-bevande__img">
                             <?php echo kama_thumb_img('w=430'); ?>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </a>
-                        <h3 class="title"><?php the_title(); ?>
-                            <a class="link" target="_blank" href="<?php echo carbon_get_the_post_meta('crb_bevanda_link'); ?>">
-                                <span> Visita il sito</span>
-                                <i class="fas fa-chevron-circle-right"></i>
-                            </a>
-                        </h3>
+                        <h3 class="title"><?php the_title(); ?></h3>
+                        <a class="link" target="_blank" href="<?php echo carbon_get_the_post_meta('crb_bevanda_link'); ?>">
+                            <span> Visita il sito</span>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </a>
                     </div>
             	<?php endwhile; ?>
             	<?php wp_reset_postdata(); ?>

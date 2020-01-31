@@ -151,6 +151,10 @@ a {
 	color: #008BCF;
 }
 
+a:focus {
+	outline: none;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -323,33 +327,20 @@ p {
 	transition: all .3s;
 	overflow: hidden;
 }
-.link::before {
-	content: '';
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #008BCF;
-	opacity: 0;
-	transition: .1s;
-	z-index: -1;
+.link:hover {
+	color: #008BCF;
 }
 .link:active,
 .link:visited {
 	color: #008BCF;
 }
 
-.link:hover {
-	color: white;
+.link i {
+	transition: .3s;
 }
-.link:hover:before {
-	top: 0;
-	opacity: 1;
-}
-
 .link:hover i {
-	color: white;
+	color: #008BCF;
+	transform: translateX(10px);
 }
 
 .link.link--reverse {
@@ -1098,21 +1089,23 @@ p {
 	}
 }
 
+.alte-bevande__img,
 .products .product__img {
 	position: relative;
-	transition: box-shadow .3s;
 	overflow: hidden;
 }
 
+.alte-bevande__img:hover,
 .products .product__img:hover {
-	box-shadow: 0 0 10px #008BCF,0 0 40px #008BCF,0 0 80px #008BCF;
 	transition-delay: .75s;
 }
 
+.alte-bevande__img span,
 .products .product__img span {
 	position: absolute;
 	display: block;
 }
+.alte-bevande__img span:nth-of-type(1),
 .products .product__img span:nth-of-type(1) {
 	top: 0;
 	left: -100%;
@@ -1121,10 +1114,12 @@ p {
 	background: linear-gradient(90deg, transparent, #008BCF);
 }
 
+.alte-bevande__img:hover span:nth-of-type(1),
 .products .product__img:hover span:nth-of-type(1) {
 	left: 0;
 	transition: all .15s;
 }
+.alte-bevande__img span:nth-of-type(2),
 .products .product__img span:nth-of-type(2) {
 	top: -100%;
 	right: 0;
@@ -1133,11 +1128,13 @@ p {
 	background: linear-gradient(180deg, transparent, #008BCF);
 }
 
+.alte-bevande__img:hover span:nth-of-type(2),
 .products .product__img:hover span:nth-of-type(2) {
 	top: 0;
 	transition: all .15s;
 	transition-delay: .15s;
 }
+.alte-bevande__img span:nth-of-type(3),
 .products .product__img span:nth-of-type(3) {
 	bottom: 0;
 	right: -100%;
@@ -1146,12 +1143,14 @@ p {
 	background: linear-gradient(270deg, transparent, #008BCF);
 }
 
+.alte-bevande__img:hover span:nth-of-type(3),
 .products .product__img:hover span:nth-of-type(3) {
 	right: 0;
 	transition: all .3s;
 	transition-delay: .3s;
 }
 
+.alte-bevande__img span:nth-of-type(4),
 .products .product__img span:nth-of-type(4) {
 	bottom: -100%;
 	left: 0;
@@ -1160,6 +1159,7 @@ p {
 	background: linear-gradient(360deg, transparent, #008BCF);
 }
 
+.alte-bevande__img:hover span:nth-of-type(4),
 .products .product__img:hover span:nth-of-type(4) {
 	bottom: 0;
 	transition: all .45s;
@@ -1330,7 +1330,6 @@ p {
 }
 
 .alte-bevande__item .link {
-	display: block;
 	font-size: 16px;
 }
 
