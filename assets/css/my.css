@@ -1082,7 +1082,71 @@ p {
 }
 
 .products .product__img {
+	position: relative;
+	transition: box-shadow .3s;
 	overflow: hidden;
+}
+
+.products .product__img:hover {
+	box-shadow: 0 0 10px #008BCF,0 0 40px #008BCF,0 0 80px #008BCF;
+	transition-delay: .75s;
+}
+
+.products .product__img span {
+	position: absolute;
+	display: block;
+}
+.products .product__img span:nth-of-type(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #008BCF);
+}
+
+.products .product__img:hover span:nth-of-type(1) {
+	left: 0;
+	transition: all .15s;
+}
+.products .product__img span:nth-of-type(2) {
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #008BCF);
+}
+
+.products .product__img:hover span:nth-of-type(2) {
+	top: 0;
+	transition: all .15s;
+	transition-delay: .15s;
+}
+.products .product__img span:nth-of-type(3) {
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #008BCF);
+}
+
+.products .product__img:hover span:nth-of-type(3) {
+	right: 0;
+	transition: all .3s;
+	transition-delay: .3s;
+}
+
+.products .product__img span:nth-of-type(4) {
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #008BCF);
+}
+
+.products .product__img:hover span:nth-of-type(4) {
+	bottom: 0;
+	transition: all .45s;
+	transition-delay: .45s;
 }
 
 @media screen and (max-width: 576px) {

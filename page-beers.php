@@ -19,6 +19,10 @@
 						<?php if ( has_post_thumbnail() ): ?>
 							<?php the_post_thumbnail( 'full' ); ?>
 						<?php endif; ?>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </a>
                     <h3 class="title"><?php the_title(); ?></h3>
                     <a class="link" href="<?php the_permalink(); ?>">
