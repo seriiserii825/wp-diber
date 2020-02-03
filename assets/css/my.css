@@ -756,6 +756,7 @@ p {
 	display: grid;
 	grid-template-columns: 1fr 570px;
 	grid-gap: 30px;
+	align-items: start;
 }
 
 @media screen and (max-width: 1300px) {
