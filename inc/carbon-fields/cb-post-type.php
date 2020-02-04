@@ -33,7 +33,8 @@ function crb_attach_beer_options() {
 		              ->add_fields( array(
 			              Field::make( 'text', 'text', __( 'Nome del collegamento' ) )
 			                   ->set_width(50),
-			              Field::make( 'text', 'link', __( "Url link" ) )
+			              Field::make( 'file', 'file', __( "Pdf file" ) )
+				              ->set_value_type( 'url' )
 			                   ->set_width(50),
 		              ) )
 		              ->set_layout( 'tabbed-horizontal' )

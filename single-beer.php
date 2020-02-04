@@ -14,7 +14,7 @@
                             <?php the_content(); ?>
                         </div>
                         <div class="single-product__link">
-                            <a href="<?php echo carbon_get_the_post_meta('crb_beer_link'); ?>">www.paulaner.it</a>
+                            <a target="_blank" href="<?php echo carbon_get_the_post_meta('crb_beer_link'); ?>"><?php echo carbon_get_the_post_meta('crb_beer_link');?></a>
                         </div>
                     </div>
 
@@ -23,7 +23,7 @@
                             <?php $productions = carbon_get_the_post_meta('crb_beer_links'); ?>
                             <?php foreach($productions as $item): ?>
                                 <li>
-                                    <a class="link link--reverse" href="<?php echo $item['link']; ?>">
+                                    <a class="link link--reverse" target="_blank" href="<?php echo $item['file']; ?>">
                                         <span><?php echo $item['text']; ?></span>
                                         <i class="fas fa-chevron-circle-right"></i>
                                     </a>
