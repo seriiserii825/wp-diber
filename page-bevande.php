@@ -35,7 +35,7 @@ get_header();
             		<?php $bevande->the_post(); ?>
                     <?php $term = get_the_terms(get_the_ID(), 'type')[0]->slug; ?>
                     <div class="alte-bevande__item mix <?php echo $term; ?>">
-                        <a href="<?php echo carbon_get_the_post_meta('crb_bevanda_link'); ?>" class="alte-bevande__img">
+                        <a target="_blank" href="<?php echo carbon_get_the_post_meta('crb_bevanda_link'); ?>" class="alte-bevande__img">
                             <?php echo kama_thumb_img('w=430'); ?>
                             <span></span>
                             <span></span>

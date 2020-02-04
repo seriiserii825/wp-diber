@@ -24,9 +24,10 @@ function crb_attach_beer_options() {
 	Container::make( 'post_meta', __( 'Fields' ) )
 	         ->where( 'post_type', '=', 'beer' )
 	         ->add_fields( array(
-		         Field::make( 'text', 'crb_beer_title', __( 'Titolo da visualizzare nella pagina di un singolo record' ) )
-		              ->set_width(50),
+		         Field::make( 'text', 'crb_beer_title', __( 'Titolo da visualizzare nella pagina di un singolo record' ) ),
 		         Field::make( 'text', 'crb_beer_link', __( "Riferimento al produttore di birra" ) )
+		              ->set_width(50),
+		         Field::make( 'text', 'crb_beer_url', __( 'Link del collegamento' ) )
 		              ->set_width(50),
 
 		         Field::make( 'complex', 'crb_beer_links', __( 'Collegamento alle filiali' ) )
