@@ -80,5 +80,28 @@ get_header();
     </div>
 
     <h3 class="title title--color services-block__title"><?php echo carbon_get_post_meta(5, 'crb_nostri_servizi_link'); ?></h3>
-    <?php require __DIR__.'/template-parts/services-block.php';?>
-<?php get_footer(); ?>
+    <section class="services-block">
+        <div class="services-block__wrap">
+			<?php $services = new WP_Query( [
+				'post_type'      => 'services',
+				'posts_per_page' => 4,
+				'order'          => 'ASC'
+			] ); ?>
+			<?php if ( $services->have_posts() ): ?>
+				<?php while ( $services->have_posts() ): ?>
+					<?php $services->the_post(); ?>
+                    <a href="<?php echo get_page_link(11); ?>" class="services-block__item" style="background-image: url('<?php echo kama_thumb_src( 'w=892' ); ?>')">
+                        <footer class="services-block__footer">
+                            <h3 class="title"><?php the_title(); ?></h3>
+                            <div class="services-block__text">
+								<?php the_content(); ?>
+                            </div>
+                        </footer>
+                    </a>
+				<?php endwhile; ?>
+				<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+        </div>
+    </section>
+
+    <?php get_footer(); ?>
