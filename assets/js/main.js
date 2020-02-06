@@ -1,15 +1,5 @@
 jQuery(document).ready(function($) {
 
-	let mainSlider = function () {
-		if ($('#js-main-slider').length > 0) {
-			$('#js-main-slider').slick({
-				arrows: false,
-				dots: false
-			});
-		}
-	};
-	mainSlider();
-
 	let sandwitch = function () {
 		$('.sandwitch').on('click', function () {
 			// $('#js-main-menu').slideToggle();

@@ -11,6 +11,14 @@ add_action( 'carbon_fields_register_fields', 'crb_attach_page_finance_options' )
 function crb_attach_page_finance_options() {
 	Container::make( 'post_meta', __( 'Fields' ) )
 	         ->where( 'post_id', '=', 5 )
+	         ->add_tab( __( 'Intro' ), array(
+		         Field::make( 'text', 'crb_intro_title', __( 'Title for Intro' ) ),
+		         Field::make( 'text', 'crb_intro_text', __( 'Text for Intro' ) ),
+		         Field::make( 'text', 'crb_intro_link_text', __( 'Link text' ) ),
+		         Field::make( 'text', 'crb_intro_link_url', __( 'Link url page id' ) ),
+		         Field::make( 'image', 'crb_intro_img', __( 'Immagine' ) )
+		              ->set_value_type( 'url' )
+	         ) )
 	         ->add_tab( __( 'Le nostre birre' ), array(
 		         Field::make( 'text', 'crb_le_nostre_bire_title', __( 'Title' ) )
 		              ->set_width( 50 ),

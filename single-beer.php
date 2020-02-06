@@ -8,7 +8,7 @@
 				    <?php the_post_thumbnail(); ?>
                 </div>
                 <div class="single-product__content">
-                    <h2 class="single-product__title"><?php the_title(); ?>: <?php echo carbon_get_the_post_meta('crb_beer_title'); ?></h2>
+                    <h1 class="single-product__title"><?php the_title(); ?>: <?php echo carbon_get_the_post_meta('crb_beer_title'); ?></h1>
                     <div class="single-product__content-wrap">
                         <div class="single-product__text">
                             <?php the_content(); ?>
@@ -24,7 +24,8 @@
                             <?php foreach($productions as $item): ?>
                                 <li>
                                     <a class="link link--reverse" target="_blank" href="<?php echo $item['file']; ?>">
-                                        <span><?php echo $item['text']; ?></span>
+                                        <!--<span>--><?php //echo $item['text']; ?><!--</span>-->
+                                        <h2><?php echo $item['text']; ?></h2>
                                         <i class="fas fa-chevron-circle-right"></i>
                                     </a>
                                 </li>

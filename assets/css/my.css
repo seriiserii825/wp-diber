@@ -389,7 +389,10 @@ p {
 .link.link--reverse:hover i {
 	color: white;
 }
-.link.link--reverse span {
+.link.link--reverse h2 {
+	display: inline;
+	font-size: 16px;
+	font-weight: normal;
 	order: 1;
 	margin-right: 0;
 	margin-left: 8px;
@@ -1769,4 +1772,16 @@ p {
 
 .fab.fa-instagram {
 	font-size: 24px;
+}
+.hide-title {
+	font-size: 0;
+	width: 1px;
+	height: 1px;
+	display: inline-block;
+	overflow: hidden;
+	position: absolute!important;
+	border: 0!important;
+	padding: 0!important;
+	margin: 0!important;
+	clip: rect(1px,1px,1px,1px);
 }

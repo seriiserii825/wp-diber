@@ -5,6 +5,7 @@
 ?>
 
 <?php get_header(); ?>
+<h1 class="hide-title">Le nostre birre</h1>
 <div class="container">
     <div class="products">
 		<?php $beers = new WP_Query( [
@@ -24,7 +25,7 @@
                         <span></span>
                         <span></span>
                     </a>
-                    <h3 class="title"><?php the_title(); ?></h3>
+                    <h2 class="title"><?php the_title(); ?></h2>
                     <a class="link" href="<?php the_permalink(); ?>">
                         <span> Scopri tutte le birre</span>
                         <i class="fas fa-chevron-circle-right"></i>

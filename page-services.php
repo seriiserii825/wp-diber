@@ -10,7 +10,7 @@ get_header();
 		<?php $img_url = carbon_get_the_post_meta( 'crb_services_img' ); ?>
 
         <div class="section__intro" style="background-image: url('<?php echo $img_url; ?>')">
-            <h2 class="section__title"><?php echo carbon_get_the_post_meta( 'crb_services_title' ); ?></h2>
+            <h1 class="section__title"><?php echo carbon_get_the_post_meta( 'crb_services_title' ); ?></h1>
         </div>
 
         <div class="container">

@@ -60,7 +60,7 @@
         </div>
         <div class="main-footer__form">
             <div class="main-footer__form-wrap">
-                <h2 class="title title--color">Scrivici</h2>
+                <h3 class="title title--color">Scrivici</h3>
                 <div class="form">
 					<?php echo do_shortcode( '[contact-form-7 id="160" title="Modulo di contatto"]' ); ?>
                 </div>
