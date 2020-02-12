@@ -96,7 +96,7 @@ get_header();
                         <footer class="services-block__footer">
                             <h3 class="title"><?php the_title(); ?></h3>
                             <div class="services-block__text">
-								<?php the_content(); ?>
+								<?php echo wpautop(carbon_get_the_post_meta('crb_services_short_text')); ?>
                             </div>
                         </footer>
                     </a>

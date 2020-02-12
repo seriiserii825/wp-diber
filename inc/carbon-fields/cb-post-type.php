@@ -51,3 +51,12 @@ function crb_attach_bevanda_options() {
 			         ) ),
 	         ) );
 }
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_services_options' );
+function crb_attach_services_options() {
+	Container::make( 'post_meta', __( 'Fields' ) )
+	         ->where( 'post_type', '=', 'services' )
+	         ->add_fields( array(
+		         Field::make( 'rich_text', 'crb_services_short_text', __( 'Breve testo per il servizio' ) ),
+	         ) );
+}
