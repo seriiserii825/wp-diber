@@ -1422,6 +1422,7 @@ p {
 
 .alte-bevande__list li {
 	position: relative;
+	margin-bottom: 10px;
 	transition: all .3s;
 	cursor: pointer;
 }
