@@ -7,10 +7,10 @@
                     <div class="main-footer__contacts">
                         <div class="main-footer__contacts__item"><?php echo carbon_get_theme_option( 'crb_address' ); ?></div>
                         <div class="main-footer__contacts__item">
-                            <a target="_blank" href="<?php echo carbon_get_theme_option( 'crb_facebook' ); ?>">
+                            <a target="_blank" rel="noreferrer"  href="<?php echo carbon_get_theme_option( 'crb_facebook' ); ?>">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a target="_blank" href="<?php echo carbon_get_theme_option( 'crb_instagram' ); ?>">
+                            <a target="_blank" rel="noreferrer"  href="<?php echo carbon_get_theme_option( 'crb_instagram' ); ?>">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
@@ -76,7 +76,7 @@
             <div class="copyright_description">
 				<?php echo carbon_get_theme_option( 'crb_copyright_description' ); ?>
             </div>
-            <a href="<?php echo carbon_get_theme_option( 'crb_altuofianco_link' ); ?>" target="_blank">
+            <a href="<?php echo carbon_get_theme_option( 'crb_altuofianco_link' ); ?>" target="_blank" rel="noreferrer" >
                 <img src="<?php echo carbon_get_theme_option( 'crb_altuofianco_img' ) ?>" alt="">
             </a>
         </div>

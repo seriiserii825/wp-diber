@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes(); ?>">
+<html <?php language_attributes(); ?>>
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta charset="utf-8">
@@ -41,8 +41,8 @@
             </a>
 
             <ul class="header-socials">
-                <li><a target="_blank" href="<?php echo carbon_get_theme_option('crb_facebook'); ?>"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a target="_blank" href="<?php echo carbon_get_theme_option('crb_instagram'); ?>"><i class="fab fa-instagram"></i></a></li>
+                <li><a target="_blank" rel="noreferrer"  href="<?php echo carbon_get_theme_option('crb_facebook'); ?>"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a target="_blank" rel="noreferrer"  href="<?php echo carbon_get_theme_option('crb_instagram'); ?>"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
     </div>

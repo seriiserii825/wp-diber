@@ -49,10 +49,11 @@ jQuery(document).ready(function($) {
 		});
 
 		arrowUp.on('click', function (e) {
-			e.preventDefault();
+			// e.preventDefault();
 			$('html, body').animate({
 				scrollTop: 0
 			}, 1000);
+			return false;
 		});
 	};
 	scrollUp();
@@ -66,5 +67,6 @@ jQuery(document).ready(function($) {
 		});
 	};
 	changeInputBorderColor();
+
 
 });

@@ -44,7 +44,7 @@ get_header();
                     }
                     ?>
                     <div class="alte-bevande__item mix <?php echo $term; ?>">
-                        <a target="_blank" href="<?php echo $post_link; ?>" class="alte-bevande__img">
+                        <a target="_blank" rel="noreferrer"  href="<?php echo $post_link; ?>" class="alte-bevande__img">
                             <?php if(has_post_thumbnail()): ?>
 	                            <?php echo kama_thumb_img('w=430'); ?>
                             <?php else: ?>
@@ -57,7 +57,7 @@ get_header();
                         </a>
                         <h3 class="title"><?php the_title(); ?></h3>
 	                    <?php if($show === 'show'): ?>
-                            <a class="link" target="_blank" href="<?php echo carbon_get_the_post_meta('crb_bevanda_link'); ?>">
+                            <a class="link" target="_blank" rel="noreferrer"  href="<?php echo carbon_get_the_post_meta('crb_bevanda_link'); ?>">
                                 <span> Visita il sito</span>
                                 <i class="fas fa-chevron-circle-right"></i>
                             </a>

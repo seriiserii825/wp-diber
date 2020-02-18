@@ -1,8 +1,11 @@
+
+
 @font-face {
 	font-family: 'PT sans';
 	src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
+	font-display: swap;
 }
 
 /* Slider */
@@ -707,8 +710,13 @@ p {
 	}
 }
 .page-template-front-page .services-block__item {
+	display: block;
+	width: 100%;
 	opacity: .8;
 	transition: all .3s;
+}
+.services-block__title {
+	text-align: center;
 }
 .page-template-front-page .services-block__item:hover {
 	opacity: 1;
@@ -1444,7 +1452,9 @@ p {
 	background-repeat: no-repeat;
 	transition: .3s;
 }
-
+.page-template-page-bevande .alte-bevande__list li .alte-bevande__img {
+	background-size: cover;
+}
 .alte-bevande__list li .alte-bevande__img:hover {
 	box-shadow: 0px 0px 0px 2px #008BCF inset;
 }
