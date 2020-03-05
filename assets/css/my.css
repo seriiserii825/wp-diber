@@ -661,28 +661,31 @@ p {
 
 @media screen and (max-width: 1660px) {
 	.categories-block {
-		margin: 0 auto 50px;
-		max-width: 1100px;
 		flex-wrap: wrap;
 	}
-	.categories-block__item:nth-child(2),
-	.categories-block__item:last-child
-	{
+}
+@media screen and (max-width: 1300px) {
+	.categories-block__item {
+		flex: 0 0 49%;
+		margin-bottom: 24px;
+	}
+	.categories-block__item {
 		margin-right: 0;
 	}
 }
 
+
 @media screen and (max-width: 768px) {
 	.categories-block {
 		display: block;
-		max-width: 520px;
+		max-width: 730px;
 	}
 }
 
 
-
 @media screen and (max-width: 768px) {
 	.categories-block__item {
+		margin-right: 0;
 		margin-bottom: 30px;
 	}
 }
@@ -708,18 +711,11 @@ p {
 }
 
 .services-block__wrap {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 30px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-@media screen and (max-width: 768px) {
-	.services-block__wrap {
-		display: block;
-		margin: 0 auto 50px;
-		max-width: 520px;
-	}
-}
 
 .page-template-front-page .services-block__item {
 	display: block;
@@ -738,11 +734,18 @@ p {
 
 .services-block__item {
 	position: relative;
+	flex: 0 0 49.24%;
+	margin-bottom: 24px;
 	height: 580px;
 	color: white;
 	border: 2px solid #008BCF;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.services-block__item:nth-child(2n)
+{
+	margin-right: 0;
 }
 
 .services-block__item:visited {
@@ -758,7 +761,12 @@ p {
 	color: white;
 }
 
+
 @media screen and (max-width: 768px) {
+	.services-block__wrap {
+		display: block;
+	}
+
 	.services-block__item {
 		margin-bottom: 30px;
 	}
@@ -861,15 +869,24 @@ p {
 
 
 .main-footer__content {
-	display: grid;
-	grid-template-columns: 1fr 570px;
-	grid-gap: 30px;
-	align-items: start;
+	display: flex;
+}
+.main-footer__info {
+	flex: 1;
+	margin-right: 30px;
+}
+
+.main-footer__form {
+	flex: 0 0 520px;
 }
 
 @media screen and (max-width: 1300px) {
 	.main-footer__content {
 		display: block;
+	}
+
+	.main-footer__info {
+		margin-right: 0;
 	}
 }
 
@@ -1423,31 +1440,38 @@ p {
 }
 
 .alte-bevande {
-	display: grid;
-	grid-template-columns: 420px 1fr;
-	grid-gap: 40px;
+	display: flex;
 	padding: 80px 0;
+}
+.alte-bevande__list {
+	flex: 0 0 420px;
+	margin-right: 40px;
 }
 
 @media screen and (max-width: 1200px) {
 	.alte-bevande {
 		display: block;
 	}
-}
-
-@media screen and (max-width: 1200px) {
 	.alte-bevande__list {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		margin-bottom: 50px;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 40px;
+	}
+	.alte-bevande__list li {
+		position: relative;
+		flex: 0 0 48%;
+		margin-bottom: 10px;
+		transition: all .3s;
+		cursor: pointer;
 	}
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 992px) {
 	.alte-bevande__list {
-		grid-template-columns: repeat(2, 1fr);
+		display: block;
 	}
 }
+
 
 @media screen and (max-width: 430px) {
 	.alte-bevande__list {
@@ -1455,12 +1479,6 @@ p {
 	}
 }
 
-.alte-bevande__list li {
-	position: relative;
-	margin-bottom: 10px;
-	transition: all .3s;
-	cursor: pointer;
-}
 
 .alte-bevande__list li.mixitup-control-active .alte-bevande__img {
 	box-shadow: 0px 0px 0px 2px #008BCF inset;
@@ -1515,40 +1533,52 @@ p {
 }
 
 .alte-bevande__content {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
 }
 
-@media screen and (max-width: 1400px) {
-	.alte-bevande__content {
-		grid-template-columns: repeat(2, 1fr);
+.alte-bevande__item {
+	flex: 0 0 30%;
+	margin-bottom: 30px;
+	margin-right: 30px;
+}
+
+
+@media screen and (max-width: 1500px) {
+	.alte-bevande__item {
+		flex: 0 0 48%;
+		margin-right: 30px;
+	}
+	.alte-bevande__item:nth-child(3n)
+	{
+		margin-right: 30px;
+	}
+	.alte-bevande__item:nth-child(2n) {
+		margin-right: 0;
+	}
+}
+@media screen and (max-width: 1300px) {
+	.alte-bevande__item {
+		flex: 0 0 46%;
 	}
 }
 
-@media screen and (max-width: 1200px) {
-	.alte-bevande__content {
-		grid-template-columns: repeat(4, 1fr);
-	}
-}
-
-@media screen and (max-width: 1100px) {
-	.alte-bevande__content {
-		grid-template-columns: repeat(3, 1fr);
-	}
-}
-
-@media screen and (max-width: 768px) {
-	.alte-bevande__content {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 992px) {
 	.alte-bevande__content {
 		display: block;
 	}
+	.alte-bevande__item {
+		margin-right: 0;
+	}
+
+	.alte-bevande__item:nth-child(3n)
+	{
+		margin-right: 0;
+	}
 }
+
+
 
 .alte-bevande__content .alte-bevande__img {
 	display: block;
@@ -1560,6 +1590,10 @@ p {
 }
 
 @media screen and (max-width: 430px) {
+	.alte-bevande__content {
+		display: block;
+	}
+
 	.alte-bevande__item {
 		margin-bottom: 40px;
 	}
