@@ -117,7 +117,7 @@ get_header();
             <h3 class="popup__title">Sei maggiornenne?</h3>
             <div class="popup__form">
                 <div class="popup__buttons">
-                    <a class="popup__btn" href="#">Si</a>
+                    <a id="js-popup-close-checkbox" class="popup__btn" href="#">Si</a>
                     <a id="js-popup-close" class="popup__btn" href="#">No</a>
                 </div>
                 <div class="popup__checkbox">

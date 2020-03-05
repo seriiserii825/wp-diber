@@ -116,6 +116,11 @@ body {
 	background: #000;
 }
 
+body.fixed {
+	overflow: hidden;
+	padding-right: 14px;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -2052,4 +2057,31 @@ p {
 	height: 100%;
 	background: rgba(0,0,0,.7);
 	z-index: 10098;
+}
+@media screen and (max-width: 980px) {
+	.popup {
+		width: 420px;
+	}
+
+	.popup__footer {
+		display: block;
+		padding-top: 10px;
+	}
+	.popup__title {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.popup {
+		padding: 30px 20px 10px;
+		width: 280px;
+	}
+	.popup__title {
+		font-size: 28px;
+	}
+	.popup__btn {
+		margin-bottom: 10px;
+	}
 }
