@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
 	let sandwitch = function () {
 		$('.sandwitch').on('click', function () {
@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
 
 		$('#js-main-menu li a').each(function () {
 
-			if('/' + $(this).attr('href') === urlLink){
+			if ('/' + $(this).attr('href') === urlLink) {
 				$(this).parent().addClass('current-menu-item');
 			}
 		});
@@ -41,9 +41,9 @@ jQuery(document).ready(function($) {
 		let arrowUp = $('#js-arrow-up');
 
 		$(window).scroll(function () {
-			if($(this).scrollTop() > pointHeight ) {
+			if ($(this).scrollTop() > pointHeight) {
 				arrowUp.fadeIn();
-			}else{
+			} else {
 				arrowUp.fadeOut();
 			}
 		});
@@ -68,5 +68,17 @@ jQuery(document).ready(function($) {
 	};
 	changeInputBorderColor();
 
+	let popup = function (){
+		setTimeout(function () {
+			$('#js-popup').fadeIn(1500);
+			$('.overlay').fadeIn(1200);
+		}, 2000);
 
+		$('#js-popup-close').on('click', function (e) {
+			e.preventDefault();
+			$('.overlay').fadeOut(400);
+			$('#js-popup').fadeOut(200);
+		});
+	};
+	popup();
 });

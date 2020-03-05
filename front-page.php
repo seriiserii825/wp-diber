@@ -10,13 +10,13 @@ get_header();
 		<?php the_post(); ?>
         <div class="main-slider" id="js-main-slider">
             <div class="main-slider__item"
-                 style="background-image: url('<?php echo carbon_get_the_post_meta( 'crb_intro_img' ); ?>')">
+                 style="background-image: url('<?php echo carbon_get_the_post_meta( "crb_intro_img" ); ?>')">
                 <div class="main-slider__content-wrap">
                     <div class="main-slider__content">
-                        <h1 class="main-slider__title"><?php echo carbon_get_the_post_meta('crb_intro_title'); ?></h1>
+                        <h1 class="main-slider__title"><?php echo carbon_get_the_post_meta( 'crb_intro_title' ); ?></h1>
 
                         <div class="main-slider__text">
-							<?php echo carbon_get_the_post_meta('crb_intro_text'); ?>
+							<?php echo carbon_get_the_post_meta( 'crb_intro_text' ); ?>
                         </div>
 
                         <a class="link"
@@ -96,7 +96,7 @@ get_header();
                         <footer class="services-block__footer">
                             <h3 class="title"><?php the_title(); ?></h3>
                             <div class="services-block__text">
-								<?php echo wpautop(carbon_get_the_post_meta('crb_services_short_text')); ?>
+								<?php echo wpautop( carbon_get_the_post_meta( 'crb_services_short_text' ) ); ?>
                             </div>
                         </footer>
                     </a>
@@ -105,5 +105,28 @@ get_header();
 			<?php endif; ?>
         </div>
     </section>
+
+    <div class="popup" id="js-popup">
+        <header class="popup__header">
+            <div class="popup__logo">
+                <img src="<?php echo get_template_directory_uri() . '/assets/i/popup-logo.svg'; ?>" alt="">
+            </div>
+        </header>
+
+        <footer class="popup__footer">
+            <h3 class="popup__title">Sei maggiornenne?</h3>
+            <div class="popup__form">
+                <div class="popup__buttons">
+                    <a class="popup__btn" href="#">Si</a>
+                    <a id="js-popup-close" class="popup__btn" href="#">No</a>
+                </div>
+                <div class="popup__checkbox">
+                    <input id="js-popup-check" type="checkbox" name="check">
+                    <label for="js-popup-check">Ricordami</label>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="overlay"></div>
 
 	<?php get_footer(); ?>
