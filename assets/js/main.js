@@ -113,7 +113,7 @@ jQuery(document).ready(function ($) {
 		}, 2000);
 	};
 
-	if(!getCookie('popup1')){
+	if(!getCookie('popup')){
 		popup();
 	}
 
