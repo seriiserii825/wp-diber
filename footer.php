@@ -97,8 +97,9 @@
             <div class="popup__form">
                 <div class="popup__buttons">
                     <a id="js-popup-close-checkbox" class="popup__btn" href="#">Si</a>
-                    <a id="js-popup-close" class="popup__btn" href="#">No</a>
+                    <a id="js-popup-close" class="popup__btn" href="https://www.google.com">No</a>
                 </div>
+
                 <div class="popup__checkbox">
                     <input id="js-popup-check" type="checkbox" name="check">
                     <label for="js-popup-check">Ricordami</label>

@@ -93,13 +93,12 @@ jQuery(document).ready(function ($) {
 	}
 
 	$('#js-popup-close').on('click', function (e) {
-		e.preventDefault();
 
-		eraseCookie('popup');
-
-		$('.overlay').fadeOut(300);
-		$('#js-popup').fadeOut(300);
-		$('body').removeClass('fixed');
+		// eraseCookie('popup');
+		//
+		// $('.overlay').fadeOut(300);
+		// $('#js-popup').fadeOut(300);
+		// $('body').removeClass('fixed');
 	});
 
 	let popup = function (){
