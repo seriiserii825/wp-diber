@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'PT sans';
-	src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+	src: url("../fonts/ptsans.woff2") format("woff2"),  url("../fonts/ptsans.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -921,7 +921,7 @@ p {
 }
 
 .main-footer a:visited {
-	color: #008BCF;
+	color: white;
 }
 
 .main-footer a:hover {
