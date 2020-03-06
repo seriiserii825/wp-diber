@@ -106,27 +106,5 @@ get_header();
         </div>
     </section>
 
-    <div class="popup" id="js-popup">
-        <header class="popup__header">
-            <div class="popup__logo">
-                <img src="<?php echo get_template_directory_uri() . '/assets/i/popup-logo.svg'; ?>" alt="">
-            </div>
-        </header>
-
-        <footer class="popup__footer">
-            <h3 class="popup__title">Sei maggiornenne?</h3>
-            <div class="popup__form">
-                <div class="popup__buttons">
-                    <a id="js-popup-close-checkbox" class="popup__btn" href="#">Si</a>
-                    <a id="js-popup-close" class="popup__btn" href="#">No</a>
-                </div>
-                <div class="popup__checkbox">
-                    <input id="js-popup-check" type="checkbox" name="check">
-                    <label for="js-popup-check">Ricordami</label>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <div class="overlay"></div>
 
 	<?php get_footer(); ?>
