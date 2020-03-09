@@ -22,7 +22,7 @@ get_header();
                         <a class="link"
                            href="<?php echo get_page_link( carbon_get_the_post_meta( 'crb_intro_link_url' ) ); ?>">
                             <span><?php echo carbon_get_the_post_meta( 'crb_intro_link_text' ); ?></span>
-                            <i class="fas fa-chevron-circle-right"></i>
+                            <img src="<?php echo get_template_directory_uri().'/assets/i/chevron-right.svg'; ?>" alt="">
                         </a>
                     </div>
                 </div>
@@ -39,17 +39,21 @@ get_header();
 			<?php the_post(); ?>
             <section class="intro">
                 <div class="intro__text"
-                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/intro-bg.jpg');')">
+                     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/i/intro-bg-small.jpg');')">
+
                     <h2 class="title"><?php echo carbon_get_the_post_meta( 'crb_le_nostre_bire_title' ); ?></h2>
                     <p><?php echo carbon_get_the_post_meta( 'crb_le_nostre_bire_text' ); ?></p>
                     <a class="link"
                        href="<?php echo get_page_link( carbon_get_the_post_meta( 'crb_le_nostre_bire_link_id' ) ); ?>">
                         <span><?php echo carbon_get_the_post_meta( 'crb_le_nostre_bire_link' ); ?></span>
-                        <i class="fas fa-chevron-circle-right"></i>
+                        <img src="<?php echo get_template_directory_uri().'/assets/i/chevron-right.svg'; ?>" alt="">
                     </a>
                 </div>
                 <div class="intro__img">
-					<?php echo kama_thumb_img( 'w=910 &h=585', carbon_get_the_post_meta( 'crb_le_nostre_bire_img' ) ); ?>
+                    <?php
+                        $img_url = carbon_get_the_post_meta( 'crb_le_nostre_bire_img' );
+                    ?>
+                    <img src="<?php echo $img_url; ?>" alt="">
                 </div>
             </section>
 		<?php endwhile; ?>
@@ -67,13 +71,12 @@ get_header();
 			<?php
 			$term_img = carbon_get_term_meta( $term->term_id, 'crb_bevanda_img' );
 			?>
-            <div class="categories-block__item"
-                 style="background-image: url('<?php echo kama_thumb_src( 'w=430 $h=500', $term_img ) ?>')">
+            <div class="categories-block__item" style="background-image: url('<?php echo wp_get_attachment_image_src($term_img, 'full')[0]; ?>')">
                 <div class="categories-block__footer">
                     <h2 class="title"><?php echo $term->name; ?></h2>
                     <a class="link" href="<?php echo get_page_link( 9 ); ?>">
                         <span><?php echo carbon_get_post_meta( 5, 'crb_alte_bevande_link' ); ?></span>
-                        <i class="fas fa-chevron-circle-right"></i>
+                        <img src="<?php echo get_template_directory_uri().'/assets/i/chevron-right.svg'; ?>" alt="">
                     </a>
                 </div>
             </div>
@@ -88,11 +91,12 @@ get_header();
 				'posts_per_page' => 4,
 				'order'          => 'ASC'
 			] ); ?>
+            <!--kama_thumb_src( 'w=892' )-->
 			<?php if ( $services->have_posts() ): ?>
 				<?php while ( $services->have_posts() ): ?>
 					<?php $services->the_post(); ?>
                     <a href="<?php echo get_page_link( 11 ); ?>" class="services-block__item"
-                       style="background-image: url('<?php echo kama_thumb_src( 'w=892' ); ?>')">
+                       style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')">
                         <footer class="services-block__footer">
                             <h3 class="title"><?php the_title(); ?></h3>
                             <div class="services-block__text">

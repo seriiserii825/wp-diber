@@ -59,7 +59,7 @@ get_header();
 	                    <?php if($show === 'show'): ?>
                             <a class="link" target="_blank" rel="noreferrer"  href="<?php echo carbon_get_the_post_meta('crb_bevanda_link'); ?>">
                                 <span> Visita il sito</span>
-                                <i class="fas fa-chevron-circle-right"></i>
+                                <img src="<?php echo get_template_directory_uri().'/assets/i/chevron-right.svg'; ?>" alt="">
                             </a>
                         <?php endif; ?>
                     </div>

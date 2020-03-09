@@ -50,7 +50,7 @@
                         <h2 class="title"><?php the_title(); ?></h2>
                         <a class="link" href="<?php the_permalink_rss(); ?>">
                             <span> Scopri tutte le birre</span>
-                            <i class="fas fa-chevron-circle-right"></i>
+                            <img src="<?php echo get_template_directory_uri().'/assets/i/chevron-right.svg'; ?>" alt="">
                         </a>
                     </div>
 				<?php endwhile; ?>

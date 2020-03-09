@@ -82,7 +82,7 @@
         </div>
     </div>
     <a href="#" id="js-arrow-up" class="arrow-up">
-        <i class="fas fa-arrow-circle-up"></i>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/i/arrow-up-resized.svg" alt="">
     </a>
 
     <div class="popup" id="js-popup">
