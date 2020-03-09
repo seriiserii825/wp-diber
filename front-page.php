@@ -9,8 +9,7 @@ get_header();
 	<?php while ( have_posts() ): ?>
 		<?php the_post(); ?>
         <div class="main-slider" id="js-main-slider">
-            <div class="main-slider__item"
-                 style="background-image: url('<?php echo carbon_get_the_post_meta( "crb_intro_img" ); ?>')">
+            <div class="main-slider__item" style="background-image: url('<?php echo carbon_get_the_post_meta( "crb_intro_img" ); ?>')">
                 <div class="main-slider__content-wrap">
                     <div class="main-slider__content">
                         <h1 class="main-slider__title"><?php echo carbon_get_the_post_meta( 'crb_intro_title' ); ?></h1>
