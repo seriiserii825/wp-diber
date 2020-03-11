@@ -220,6 +220,24 @@ p {
 		padding-right: 15px;
 	}
 }
+.main-header.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 114px;
+	background: rgba(0,0,0,.8);
+	z-index: 10000;
+}
+@media screen and (max-width: 576px) {
+	.main-header.fixed {
+		height: 80px;
+	}
+
+	.main-header.fixed .logo {
+		width: 100px;
+	}
+}
 
 .main-header__wrap {
 	position: relative;

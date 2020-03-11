@@ -15,7 +15,7 @@ window.onload=function(){
 
 	let fileref=document.createElement('script');
 	fileref.setAttribute("type","text/javascript");
-	fileref.setAttribute("src", 'https://maps.googleapis.com/maps/api/js?key=Key=initMap');
+	fileref.setAttribute("src", 'https://maps.googleapis.com/maps/api/js?key==initMap');
 
 	setTimeout(function () {
 		document.getElementsByTagName("body")[0].appendChild(mapInitElem);
@@ -24,6 +24,23 @@ window.onload=function(){
 };
 
 jQuery(document).ready(function ($) {
+
+	let stickyMenu = function(){
+		let documentHeight = $(document).height();
+		let pointHeight = documentHeight * .1;
+		let mainHeader = $('.main-header');
+
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > pointHeight) {
+				if( !mainHeader.hasClass('fixed')) {
+					mainHeader.addClass('fixed')
+				}
+			} else {
+				mainHeader.removeClass('fixed')
+			}
+		});
+	};
+	stickyMenu();
 
 	let sandwitch = function () {
 		$('.sandwitch').on('click', function () {
