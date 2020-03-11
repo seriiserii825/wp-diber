@@ -1,3 +1,28 @@
+window.onload=function(){
+	let mapInitElem=document.createElement('script');
+	mapInitElem.setAttribute("type","text/javascript");
+	mapInitElem.innerHTML = "" +
+		"function initMap() {"+
+			// The location of Uluru
+			"var mapCenter = {lat: 45.9590269, lng: 12.3180639};" +
+			// The map, centered at Uluru
+			"var map = new google.maps.Map(" +
+				"document.getElementById('js-map'), {zoom: 15, center: mapCenter});" +
+			// The marker, positioned at Uluru
+			"var marker = new google.maps.Marker({position: mapCenter, map: map});" +
+		"}";
+
+
+	let fileref=document.createElement('script');
+	fileref.setAttribute("type","text/javascript");
+	fileref.setAttribute("src", 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBxE4eV2_MWXXb7iPnhOD8nRoIcVWxnNRU&callback=initMap');
+
+	setTimeout(function () {
+		document.getElementsByTagName("body")[0].appendChild(mapInitElem);
+		document.getElementsByTagName("body")[0].appendChild(fileref);
+	}, 2000);
+};
+
 jQuery(document).ready(function ($) {
 
 	let sandwitch = function () {
@@ -132,4 +157,6 @@ jQuery(document).ready(function ($) {
 		});
 	};
 	localStoragePopup();
+
 });
+

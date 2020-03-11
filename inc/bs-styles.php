@@ -21,7 +21,6 @@ function bs_diber_scripts() {
 	if(is_page(9) || is_page(7) ){
 		wp_enqueue_script('bs-mixitup-js', get_template_directory_uri().'/assets/libs/mixitup/mixitup.min.js', ['jquery'], null, true);
 	}
-//	wp_enqueue_script('bs-main', get_template_directory_uri().'/assets/js/main.js', ['jquery'], null, true);
 	wp_enqueue_script('bs-main', get_template_directory_uri().'/assets/js/main.js', ['jquery'], null, true);
 
 //	wp_enqueue_script( 'bs-diber-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
