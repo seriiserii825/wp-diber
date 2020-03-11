@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) {
 
 function bs_diber_scripts() {
 	wp_enqueue_style( 'bs-diber-style', get_stylesheet_uri() );
-	wp_enqueue_style('bs-font-awesome-css', get_template_directory_uri().'/assets/libs/fontawesome/css/all.min.css');
+//	wp_enqueue_style('bs-font-awesome-css', get_template_directory_uri().'/assets/libs/fontawesome/css/all.min.css');
 //	wp_enqueue_style('bs-my-css', get_template_directory_uri().'/assets/css/my.css');
 	wp_enqueue_style('bs-my-css', get_template_directory_uri().'/assets/css/my.css');
 
