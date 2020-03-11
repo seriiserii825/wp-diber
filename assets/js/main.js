@@ -15,7 +15,7 @@ window.onload=function(){
 
 	let fileref=document.createElement('script');
 	fileref.setAttribute("type","text/javascript");
-	fileref.setAttribute("src", 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBxE4eV2_MWXXb7iPnhOD8nRoIcVWxnNRU&callback=initMap');
+	fileref.setAttribute("src", 'https://maps.googleapis.com/maps/api/js?key==initMap');
 
 	setTimeout(function () {
 		document.getElementsByTagName("body")[0].appendChild(mapInitElem);
