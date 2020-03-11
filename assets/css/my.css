@@ -311,6 +311,12 @@ p {
 	display: block;
 	z-index: 10000;
 }
+@media screen and (max-width: 1440px) {
+	.logo {
+		left: 52.2%;
+	}
+}
+
 
 @media screen and (max-width: 1180px) {
 	.logo {
