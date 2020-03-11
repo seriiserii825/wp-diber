@@ -57,8 +57,8 @@
                 </div>
             </div>
 
-            <div class="map">
-                <?php echo do_shortcode('[wpgmza id="1"]'); ?>
+            <div class="map" id="js-map">
+<!--                --><?php //echo do_shortcode('[wpgmza id="1"]'); ?>
                 <!--<iframe src="https://www.google.it/maps/embed?pb=!1m18!1m12!1m3!1d2773.612390166544!2d12.31806391580244!3d45.9590269083091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477913a9bd0bee31%3A0xf64f6a80d8fbe1fc!2zVmlhIFRyZW50aW5vLCAyMiwgMzEwMjkgVml0dG9yaW8gVmVuZXRvIFRWLCDQmNGC0LDQu9C40Y8!5e0!3m2!1sru!2s!4v1580402534690!5m2!1sru!2s"-->
                 <!--        width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>-->
             </div>
@@ -115,6 +115,27 @@
     </div>
 
     <div class="overlay"></div>
+
+    <script>
+		// Initialize and add the map
+		function initMap() {
+			// The location of Uluru
+			var uluru = {lat: -25.344, lng: 131.036};
+			// The map, centered at Uluru
+			var map = new google.maps.Map(
+				document.getElementById('js-map'), {zoom: 4, center: uluru});
+			// The marker, positioned at Uluru
+			var marker = new google.maps.Marker({position: uluru, map: map});
+		}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 </footer>
 </div>
 </div><!--[if lt IE 9]>
