@@ -1,20 +1,20 @@
-window.onload=function(){
-	let mapInitElem=document.createElement('script');
-	mapInitElem.setAttribute("type","text/javascript");
+window.onload = function () {
+	let mapInitElem = document.createElement('script');
+	mapInitElem.setAttribute("type", "text/javascript");
 	mapInitElem.innerHTML = "" +
-		"function initMap() {"+
-			// The location of Uluru
-			"var mapCenter = {lat: 45.9590269, lng: 12.3180639};" +
-			// The map, centered at Uluru
-			"var map = new google.maps.Map(" +
-				"document.getElementById('js-map'), {zoom: 15, center: mapCenter});" +
-			// The marker, positioned at Uluru
-			"var marker = new google.maps.Marker({position: mapCenter, map: map});" +
+		"function initMap() {" +
+		// The location of Uluru
+		"var mapCenter = {lat: 45.9590269, lng: 12.3180639};" +
+		// The map, centered at Uluru
+		"var map = new google.maps.Map(" +
+		"document.getElementById('js-map'), {zoom: 15, center: mapCenter});" +
+		// The marker, positioned at Uluru
+		"var marker = new google.maps.Marker({position: mapCenter, map: map});" +
 		"}";
 
 
-	let fileref=document.createElement('script');
-	fileref.setAttribute("type","text/javascript");
+	let fileref = document.createElement('script');
+	fileref.setAttribute("type", "text/javascript");
 	fileref.setAttribute("src", 'https://maps.googleapis.com/maps/api/js?key==initMap');
 
 	setTimeout(function () {
@@ -25,14 +25,14 @@ window.onload=function(){
 
 jQuery(document).ready(function ($) {
 
-	let stickyMenu = function(){
+	let stickyMenu = function () {
 		let documentHeight = $(document).height();
 		let pointHeight = documentHeight * .1;
 		let mainHeader = $('.main-header');
 
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > pointHeight) {
-				if( !mainHeader.hasClass('fixed')) {
+				if (!mainHeader.hasClass('fixed')) {
 					mainHeader.addClass('fixed')
 				}
 			} else {
@@ -110,28 +110,29 @@ jQuery(document).ready(function ($) {
 	};
 	changeInputBorderColor();
 
-	function setCookie(name,value,days) {
+	function setCookie(name, value, days) {
 		var expires = "";
 		if (days) {
 			var date = new Date();
-			date.setTime(date.getTime() + (days*24*60*60*1000));
+			date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
 			expires = "; expires=" + date.toUTCString();
 		}
-		document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+		document.cookie = name + "=" + (value || "") + expires + "; path=/";
 	}
 
 	function getCookie(name) {
 		var nameEQ = name + "=";
 		var ca = document.cookie.split(';');
-		for(var i=0;i < ca.length;i++) {
+		for (var i = 0; i < ca.length; i++) {
 			var c = ca[i];
-			while (c.charAt(0)==' ') c = c.substring(1,c.length);
-			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
 		}
 		return null;
 	}
+
 	function eraseCookie(name) {
-		document.cookie = name+'=; Max-Age=-99999999;';
+		document.cookie = name + '=; Max-Age=-99999999;';
 	}
 
 	$('#js-popup-close').on('click', function (e) {
@@ -143,7 +144,7 @@ jQuery(document).ready(function ($) {
 		// $('body').removeClass('fixed');
 	});
 
-	let popup = function (){
+	let popup = function () {
 		setTimeout(function () {
 			$('#js-popup').fadeIn(100);
 			$('.overlay').fadeIn(100);
@@ -154,7 +155,7 @@ jQuery(document).ready(function ($) {
 		}, 300);
 	};
 
-	if(!getCookie('popup')){
+	if (!getCookie('popup')) {
 		$('body').addClass('fixed');
 		popup();
 	}
@@ -162,9 +163,9 @@ jQuery(document).ready(function ($) {
 	let localStoragePopup = function () {
 		$('#js-popup-close-checkbox').on('click', function (e) {
 			e.preventDefault();
-			if($('#js-popup input[type="checkbox"]').is(':checked')){
+			if ($('#js-popup input[type="checkbox"]').is(':checked')) {
 				setCookie('popup', 'hide', 30);
-			}else{
+			} else {
 				setCookie('popup', 'hide', 1);
 			}
 
@@ -174,6 +175,22 @@ jQuery(document).ready(function ($) {
 		});
 	};
 	localStoragePopup();
+
+	if ($('body').hasClass('home')) {
+		setTimeout(function () {
+			$('body').addClass('fixed');
+			$('#js-custom-modal').fadeIn();
+			$('#js-custom-overlay').fadeIn();
+		}, 1000);
+
+		$('#js-custom-modal__close').on('click', function (e) {
+			e.preventDefault();
+
+			$('body').removeClass('fixed');
+			$('#js-custom-modal').fadeOut();
+			$('#js-custom-overlay').fadeOut();
+		});
+	}
 
 });
 

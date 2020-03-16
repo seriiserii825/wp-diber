@@ -109,5 +109,22 @@ get_header();
         </div>
     </section>
 
+    <div class="custom-modal" id="js-custom-modal">
+        <div class="custom-modal__container">
+            <div class="custom-modal__text">
+                <p>Informiamo i nostri clienti che, in seguito alle disposizione relative all'emergenza COVID-19, tutte le consegne sono sospese fino al 6 Aprile.</p>
+                <p>Il nostro magazzino rimane invece aperto con gli orari consueti</p>
+            </div>
+            <div class="custom-modal__footer">
+                <div class="custom-modal__bottom">
+                    <h5>Cordiali saluti</h5>
+                    <a class="custom-modal__close" id="js-custom-modal__close" href="#">Continua</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-overlay" id="js-custom-overlay"></div>
+
 
 	<?php get_footer(); ?>
