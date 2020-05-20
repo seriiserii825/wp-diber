@@ -58,7 +58,14 @@
             </div>
 
             <div class="map" id="js-map"></div>
-
+            <script>
+				function initMap() {
+					let mapCenter = {lat: 45.9590269, lng: 12.3180639};
+					let map = new google.maps.Map(document.getElementById('js-map'), {zoom: 15, center: mapCenter});
+					let marker = new google.maps.Marker({position: mapCenter, map: map});
+				}
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxE4eV2_MWXXb7iPnhOD8nRoIcVWxnNRU&amp;callback=initMap"></script>
         </div>
         <div class="main-footer__form">
             <div class="main-footer__form-wrap">

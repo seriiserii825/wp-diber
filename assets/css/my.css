@@ -945,6 +945,7 @@ p {
 
 .main-footer__content {
 	display: flex;
+	align-items: flex-start;
 }
 
 .main-footer__info {
